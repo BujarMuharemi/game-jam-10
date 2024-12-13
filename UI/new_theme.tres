@@ -1,0 +1,49 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dprv3gl1lyl4e"]
+
+[sub_resource type="SystemFont" id="SystemFont_vyh8v"]
+font_names = PackedStringArray("UbuntuMono Nerd Font")
+
+[sub_resource type="FontVariation" id="FontVariation_o26r1"]
+base_font = SubResource("SystemFont_vyh8v")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b6um"]
+bg_color = Color(0, 0, 0, 1)
+skew = Vector2(0.1, 0)
+border_width_left = 30
+border_width_top = 3
+border_width_bottom = 1
+border_color = Color(0.954222, 0.436064, 3.85046e-07, 1)
+corner_radius_top_left = 50
+expand_margin_left = 25.0
+expand_margin_top = 5.0
+expand_margin_right = 25.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 0, 0, 0.823529)
+shadow_size = 3
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q87xq"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 30
+border_width_top = 3
+border_width_bottom = 1
+border_color = Color(0.954222, 0.436064, 3.85046e-07, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_left = 50
+expand_margin_left = 25.0
+expand_margin_top = 5.0
+expand_margin_right = 25.0
+expand_margin_bottom = 5.0
+shadow_size = 3
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="SystemFont" id="SystemFont_wm8hk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_463bc"]
+
+[resource]
+Button/fonts/font = SubResource("FontVariation_o26r1")
+Button/styles/hover = SubResource("StyleBoxFlat_1b6um")
+Button/styles/normal = SubResource("StyleBoxFlat_q87xq")
+Label/fonts/font = SubResource("SystemFont_wm8hk")
+Label/styles/normal = SubResource("StyleBoxFlat_463bc")

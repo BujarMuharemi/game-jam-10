@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://iafij1qqvsgg"]
+
+[ext_resource type="Script" path="res://game_world/game_manager/game_manager.gd" id="1_g2v3r"]
+[ext_resource type="PackedScene" uid="uid://cfk6vtwnykqyx" path="res://UI/start_scene/start_scene.tscn" id="2_vo6vr"]
+[ext_resource type="PackedScene" uid="uid://dd3hbk4vuabt0" path="res://UI/options_scene/options_scene.tscn" id="3_jsqs1"]
+[ext_resource type="PackedScene" uid="uid://bpnuxiq0v5mj8" path="res://UI/pause_scene/pause_scene.tscn" id="4_7xtkn"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_g2v3r")
+
+[node name="start_scene" parent="." instance=ExtResource("2_vo6vr")]
+
+[node name="options_scene" parent="." instance=ExtResource("3_jsqs1")]
+visible = false
+
+[node name="pause_scene" parent="." instance=ExtResource("4_7xtkn")]
+visible = false
+
+[connection signal="back_from_options_pressed" from="options_scene" to="." method="_on_options_scene_back_from_options_pressed"]

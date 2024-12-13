@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://75ba58pbuguj"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 823.0
+offset_top = 499.0
+offset_right = 1074.0
+offset_bottom = 525.0
+text = "here comes the rest of the game"
