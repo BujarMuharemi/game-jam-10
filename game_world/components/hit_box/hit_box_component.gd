@@ -6,7 +6,7 @@ var wasHit = false
 
 func damage(attack:Attack):
 	if health_component:
-		print("damage !")
+		#print("damage !")
 		health_component.damage(attack)
 	else:
 		print("lost in space ?")
@@ -14,12 +14,12 @@ func damage(attack:Attack):
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print("??",area.name,area.get_groups())
-	if(area.is_in_group("bullet") && !wasHit ):
+	#print("??",area.name,area.get_groups())
+	if(area.is_in_group("bullet")):
 		
 		var attack = area.get_parent().attack
 		health_component.damage(attack)
-	
+		area.get_parent().queue_free()
 		#$AudioStreamPlayer2D.stop()
 		#$AudioStreamPlayer2D.set_stream(sfx)
 		wasHit=true

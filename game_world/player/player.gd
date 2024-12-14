@@ -16,6 +16,13 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
+	
+	if Input.is_action_pressed("ui_left"):
+		$Sprite2D.scale.x = -1  
+	elif Input.is_action_pressed("ui_right"):
+		$Sprite2D.scale.x = 1  
+
+	
 	if direction:
 		velocity.x = direction * SPEED
 	else:

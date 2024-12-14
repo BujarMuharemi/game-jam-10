@@ -20,6 +20,9 @@ script = ExtResource("1_bbn6v")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qt5ua")
 
+[node name="Weapon" parent="Sprite2D" instance=ExtResource("6_cqgbo")]
+position = Vector2(57, 2)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_2idj0")
@@ -30,9 +33,6 @@ offset = Vector2(0.05, 0)
 script = ExtResource("3_ktpkl")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_pe6qi")]
-
-[node name="Weapon" parent="." instance=ExtResource("6_cqgbo")]
-position = Vector2(53, 5)
 
 [node name="HitBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("6_qxh24")]
 health_component = NodePath("../HealthComponent")

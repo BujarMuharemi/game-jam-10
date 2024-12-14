@@ -1,22 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtqs473g4ghc1"]
 
 [ext_resource type="Script" path="res://game_world/weapons/weapon.gd" id="1_ogbra"]
+[ext_resource type="PackedScene" uid="uid://ck3w8d7yf1by5" path="res://game_world/bullet/bullet.tscn" id="2_dcvfj"]
 [ext_resource type="Texture2D" uid="uid://fvd7x2i54hil" path="res://game_world/weapons/sniper.png" id="2_tuqkx"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm6lf"]
-size = Vector2(69, 33)
 
 [node name="Weapon" type="Node2D"]
 script = ExtResource("1_ogbra")
+bullet_scene = ExtResource("2_dcvfj")
+gunCoolDownTime = 0.4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("2_tuqkx")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Muzzle" type="Node2D" parent="."]
+position = Vector2(25, 11)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2.5, 12.5)
-shape = SubResource("RectangleShape2D_jm6lf")
-
-[connection signal="area_entered" from="Area2D" to="." method="on_hitbox_area_entered"]
+[node name="GunCoolDown" type="Timer" parent="."]
+one_shot = true
+autostart = true

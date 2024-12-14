@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://uu1iw3kfppov"]
+[gd_scene load_steps=6 format=4 uid="uid://uu1iw3kfppov"]
 
 [ext_resource type="Texture2D" uid="uid://cvhlhk6x6txg2" path="res://game_world/levels/sheet.png" id="1_7brkm"]
 [ext_resource type="PackedScene" uid="uid://drwvksi351kek" path="res://game_world/player/player.tscn" id="2_odisw"]
 [ext_resource type="PackedScene" uid="uid://b3wm5y3q8g771" path="res://game_world/enemy/enemy.tscn" id="3_d4khv"]
-[ext_resource type="PackedScene" uid="uid://ck3w8d7yf1by5" path="res://game_world/bullet/bullet.tscn" id="5_3vn3h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbv88"]
 texture = ExtResource("1_7brkm")
@@ -81,7 +80,10 @@ tile_set = SubResource("TileSet_np6er")
 position = Vector2(143, 7)
 
 [node name="Enemy" parent="." instance=ExtResource("3_d4khv")]
-position = Vector2(451, -120)
+position = Vector2(391, 18)
 
-[node name="Bullet" parent="." instance=ExtResource("5_3vn3h")]
-position = Vector2(-121, 27)
+[node name="Enemy2" parent="." instance=ExtResource("3_d4khv")]
+position = Vector2(286, -316)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_d4khv")]
+position = Vector2(595, -316)
