@@ -597,7 +597,7 @@ _data = {
 
 [node name="head" type="Sprite2D" parent="body_container/body"]
 position = Vector2(-4, 5.93372)
-rotation = -0.223329
+rotation = -0.219811
 scale = Vector2(0.999993, 0.999991)
 texture = ExtResource("1_vcpnd")
 offset = Vector2(3.30008, -6.62773)
@@ -644,7 +644,7 @@ offset = Vector2(-23, 10)
 z_index = -2
 position = Vector2(2.99999, 31.7426)
 scale = Vector2(0.999878, 0.999854)
-skew = 0.305437
+skew = 0.305436
 texture = ExtResource("7_jqeeo")
 offset = Vector2(2, 12)
 
