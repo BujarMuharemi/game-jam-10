@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://cru7qk0dvs187"]
 
-[ext_resource type="Script" path="res://game_world/enemy/hit_box_component.gd" id="1_hpqk4"]
+[ext_resource type="Script" path="res://game_world/components/hit_box/hit_box_component.gd" id="1_tvhbw"]
 
 [node name="HitBoxComponent" type="Area2D"]
-script = ExtResource("1_hpqk4")
+script = ExtResource("1_tvhbw")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

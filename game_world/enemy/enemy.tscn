@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bipi7jfuagy0x" path="res://game_world/enemy/character_zombie_attack1.png" id="1_1eyvu"]
 [ext_resource type="Script" path="res://game_world/enemy/enemy.gd" id="1_pytd5"]
-[ext_resource type="PackedScene" uid="uid://lqx5g2ugqwck" path="res://game_world/player/health_component.tscn" id="2_a4u1c"]
-[ext_resource type="PackedScene" uid="uid://cru7qk0dvs187" path="res://game_world/player/hit_box_component.tscn" id="3_20xwc"]
-[ext_resource type="Script" path="res://game_world/components/movement_component.gd" id="5_clx3u"]
+[ext_resource type="PackedScene" uid="uid://lqx5g2ugqwck" path="res://game_world/components/health/health_component.tscn" id="2_a4u1c"]
+[ext_resource type="PackedScene" uid="uid://cru7qk0dvs187" path="res://game_world/components/hit_box/hit_box_component.tscn" id="3_20xwc"]
+[ext_resource type="Script" path="res://game_world/components/movement/movement_component.gd" id="5_clx3u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc3kp"]
 size = Vector2(59, 89)
@@ -35,7 +35,7 @@ shape = SubResource("RectangleShape2D_hi2fg")
 
 [node name="MovementComponent" type="Node" parent="."]
 script = ExtResource("5_clx3u")
-max_speed = 10000.0
+max_speed = 1000.0
 acceleration = 10000.0
 friction = 10.0
 
