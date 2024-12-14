@@ -4,7 +4,7 @@ extends Node
 #TODO: https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html 
 
 var start_scene
-var options_scene
+var options_scene	
 var pause_scene
 
 ## TODO: create independent btns which can be resued in all scenes !
