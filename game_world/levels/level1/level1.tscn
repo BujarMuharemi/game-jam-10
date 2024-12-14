@@ -81,7 +81,7 @@ tile_set = SubResource("TileSet_np6er")
 position = Vector2(143, 7)
 
 [node name="Enemy" parent="." instance=ExtResource("3_d4khv")]
-position = Vector2(379, 11)
+position = Vector2(451, -120)
 
 [node name="Bullet" parent="." instance=ExtResource("5_3vn3h")]
 position = Vector2(-121, 27)
