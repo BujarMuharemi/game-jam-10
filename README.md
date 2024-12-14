@@ -5,25 +5,36 @@ Uni Ulm Jam 2
 
 ## godot featuers to use
 - tilemap
+  - can be used for animated tiles
+  - to pick up data and collison
 - Parallax2D
-- shader
+- shader's
 - AudioStreamPlaylist
 
 
-fdfdf
 
 gun shooting direction only in 2 axis ?? no mouse
 Finite State Machine for the enmy AI ?
 
-43478
 ## Components
+add idea from compo vid and seleton comp vid
+
 - movementComponent
+or user input/ ai stuff
+
+
+Bullet
+- attack
+- hitbox
+
+
 - HealthComponent
 - HitBoxComponent
-- Weapon/GunComponent
+- Weapon/GunComponent - attack component
+
 - MunitionComponent
 
 
 ## MVP
-- player movement, 
-
+- enemy movement
+- game manager ?

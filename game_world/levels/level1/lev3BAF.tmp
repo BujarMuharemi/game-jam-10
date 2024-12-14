@@ -1,9 +1,8 @@
 [gd_scene load_steps=7 format=4 uid="uid://uu1iw3kfppov"]
 
 [ext_resource type="Texture2D" uid="uid://cvhlhk6x6txg2" path="res://game_world/levels/sheet.png" id="1_7brkm"]
-[ext_resource type="PackedScene" uid="uid://drwvksi351kek" path="res://game_world/player/player.tscn" id="2_odisw"]
-[ext_resource type="PackedScene" uid="uid://b3wm5y3q8g771" path="res://game_world/enemy/enemy.tscn" id="3_d4khv"]
-[ext_resource type="PackedScene" uid="uid://dtqs473g4ghc1" path="res://game_world/player/weapon.tscn" id="4_dkvvh"]
+[ext_resource type="Script" path="res://game_world/player/player.gd" id="2_8kjse"]
+[ext_resource type="Texture2D" uid="uid://dstqv0eylfvko" path="res://game_world/player/character_femaleAdventurer_cheer0.png" id="2_ctkiy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbv88"]
 texture = ExtResource("1_7brkm")
@@ -70,18 +69,24 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cbv88")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2idj0"]
+size = Vector2(78, 100)
+
 [node name="Level1" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-53, 37)
-tile_map_data = PackedByteArray("AAACAAwAAAAAAAAAAAADAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAAFAAwAAAAAAAAAAAAGAAwAAAAAAAAAAAADAAkAAAABAAAAAAAEAAkAAAABAAAAAAAFAAkAAAABAAAAAAACAAoAAAACAAAAAAADAAoAAAACAAAAAAAEAAoAAAACAAAAAAAFAAoAAAACAAAAAAAGAAoAAAACAAAAAAAFAAYAAAACAAAAAAAFAAcAAAACAAAAAAAHAAIAAAACAAAAAAAHAAMAAAACAAAAAAAHAAEAAAACAAAAAAAGAAEAAAACAAAAAAAFAAEAAAACAAAAAAAEAAEAAAACAAAAAAADAAEAAAACAAAAAAACAAEAAAACAAAAAAACAAIAAAACAAAAAAACAAMAAAACAAAAAAACAAQAAAACAAAAAAAJAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAANAAoAAAABAAAAAAAOAAcAAAABAAAAAAAPAAcAAAABAAAAAAAQAAcAAAABAAAAAAARAAcAAAABAAAAAAASAAQAAAABAAAAAAATAAQAAAABAAAAAAAUAAQAAAABAAAAAAAUAAMAAAABAAAAAAAVAAMAAAABAAAAAAAOAAIAAAABAAAAAAANAAIAAAABAAAAAAAMAAIAAAABAAAAAAAKAP//AAABAAAAAAAJAP//AAABAAAAAAAIAP//AAABAAAAAAAFAPz/AAABAAAAAAAEAPz/AAABAAAAAAADAPz/AAABAAAAAAAKAAYAAAADAAIAAAAKAAcAAAADAAIAAAAKAAgAAAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAACAAwAAAAAAAAAAAADAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAAFAAwAAAAAAAAAAAAGAAwAAAAAAAAAAAADAAkAAAABAAAAAAAEAAkAAAABAAAAAAAFAAkAAAABAAAAAAACAAoAAAACAAAAAAADAAoAAAACAAAAAAAEAAoAAAACAAAAAAAFAAoAAAACAAAAAAAGAAoAAAACAAAAAAAFAAYAAAACAAAAAAAFAAcAAAACAAAAAAAHAAIAAAACAAAAAAAHAAMAAAACAAAAAAAHAAEAAAACAAAAAAAGAAEAAAACAAAAAAAFAAEAAAACAAAAAAAEAAEAAAACAAAAAAADAAEAAAACAAAAAAACAAEAAAACAAAAAAACAAIAAAACAAAAAAACAAMAAAACAAAAAAACAAQAAAACAAAAAAAJAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAANAAoAAAABAAAAAAAOAAcAAAABAAAAAAAPAAcAAAABAAAAAAAQAAcAAAABAAAAAAARAAcAAAABAAAAAAASAAQAAAABAAAAAAATAAQAAAABAAAAAAAUAAQAAAABAAAAAAAUAAMAAAABAAAAAAAVAAMAAAABAAAAAAAOAAIAAAABAAAAAAANAAIAAAABAAAAAAAMAAIAAAABAAAAAAAKAP//AAABAAAAAAAJAP//AAABAAAAAAAIAP//AAABAAAAAAAFAPz/AAABAAAAAAAEAPz/AAABAAAAAAADAPz/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_np6er")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_odisw")]
-position = Vector2(143, 7)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(311, 194)
+script = ExtResource("2_8kjse")
 
-[node name="Enemy" parent="." instance=ExtResource("3_d4khv")]
-position = Vector2(379, 11)
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_ctkiy")
 
-[node name="Weapon" parent="." instance=ExtResource("4_dkvvh")]
-position = Vector2(533, -105)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_2idj0")
+debug_color = Color(0.789998, 0.192179, 0.930673, 0.42)
