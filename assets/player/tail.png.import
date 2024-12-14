@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fvd7x2i54hil"
-path="res://.godot/imported/sniper.png-ed0c30bb8b8c620f208eafea3536f171.ctex"
+uid="uid://cnaok070y6xth"
+path="res://.godot/imported/tail.png-ebde112e520ee18723ed376492718cf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_world/player/sniper.png"
-dest_files=["res://.godot/imported/sniper.png-ed0c30bb8b8c620f208eafea3536f171.ctex"]
+source_file="res://assets/player/tail.png"
+dest_files=["res://.godot/imported/tail.png-ebde112e520ee18723ed376492718cf1.ctex"]
 
 [params]
 

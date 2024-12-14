@@ -31,6 +31,8 @@ enabled=PackedStringArray("res://addons/sound_manager/plugin.cfg")
 [global_group]
 
 drugs=""
+bullet=""
+pickup=""
 
 [rendering]
 

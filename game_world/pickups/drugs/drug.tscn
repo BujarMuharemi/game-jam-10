@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://csu47jns8h3og"]
+
+[ext_resource type="Script" path="res://game_world/pickups/drugs/drug.gd" id="1_pufrb"]
+[ext_resource type="Texture2D" uid="uid://da1ou2724ih8l" path="res://icon.svg" id="2_yrncs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhys5"]
+
+[node name="Drug" type="Node2D"]
+script = ExtResource("1_pufrb")
+speed_multiplier = 0.1
+
+[node name="Area2D" type="Area2D" parent="." groups=["drugs"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_yrncs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_bhys5")

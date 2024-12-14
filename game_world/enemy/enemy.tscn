@@ -1,19 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3wm5y3q8g771"]
+[gd_scene load_steps=8 format=3 uid="uid://b3wm5y3q8g771"]
 
 [ext_resource type="Texture2D" uid="uid://bipi7jfuagy0x" path="res://game_world/enemy/character_zombie_attack1.png" id="1_1eyvu"]
-[ext_resource type="PackedScene" uid="uid://lqx5g2ugqwck" path="res://game_world/player/health_component.tscn" id="2_a4u1c"]
-[ext_resource type="PackedScene" uid="uid://cru7qk0dvs187" path="res://game_world/player/hit_box_component.tscn" id="3_20xwc"]
+[ext_resource type="Script" path="res://game_world/enemy/enemy.gd" id="1_pytd5"]
+[ext_resource type="PackedScene" uid="uid://lqx5g2ugqwck" path="res://game_world/components/health/health_component.tscn" id="2_a4u1c"]
+[ext_resource type="PackedScene" uid="uid://cru7qk0dvs187" path="res://game_world/components/hit_box/hit_box_component.tscn" id="3_20xwc"]
+[ext_resource type="Script" path="res://game_world/components/movement/movement_component.gd" id="5_clx3u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc3kp"]
-size = Vector2(59, 48)
+size = Vector2(59, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hi2fg"]
 size = Vector2(52, 71.5)
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("movement_component")]
+script = ExtResource("1_pytd5")
+movement_component = NodePath("MovementComponent")
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 39)
+position = Vector2(-3, 15.5)
 shape = SubResource("RectangleShape2D_jc3kp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -27,5 +31,12 @@ texture = ExtResource("1_1eyvu")
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
-position = Vector2(-4, 17)
 shape = SubResource("RectangleShape2D_hi2fg")
+
+[node name="MovementComponent" type="Node" parent="."]
+script = ExtResource("5_clx3u")
+max_speed = 1000.0
+acceleration = 10000.0
+friction = 10.0
+
+[connection signal="area_entered" from="HitBoxComponent" to="HealthComponent" method="_on_hit_box_component_area_entered"]

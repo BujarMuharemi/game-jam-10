@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyn3xgl7x2jb4"]
+[gd_scene load_steps=4 format=3 uid="uid://d1lwfjj3tkqw3"]
 
-[ext_resource type="Script" path="res://game_world/player/pickup.gd" id="1_1piot"]
-[ext_resource type="Texture2D" uid="uid://da1ou2724ih8l" path="res://icon.svg" id="2_kmbtq"]
+[ext_resource type="Script" path="res://game_world/pickups/pickup.gd" id="1_afjxn"]
+[ext_resource type="Texture2D" uid="uid://da1ou2724ih8l" path="res://icon.svg" id="2_41xol"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dfhk"]
-size = Vector2(84, 89)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2e007"]
 
-[node name="Area2D" type="Area2D" groups=["drugs"]]
-script = ExtResource("1_1piot")
+[node name="Pickup" type="Node2D"]
+script = ExtResource("1_afjxn")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_kmbtq")
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1.5)
-shape = SubResource("RectangleShape2D_1dfhk")
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_41xol")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2e007")

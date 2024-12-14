@@ -7,8 +7,8 @@ func update_health(health: int):
 	$GameNameGroup/HealthLabel.text = str(health)
 	
 func update_bullets(current, max):
-	$BulletLabel.text = str(current) + "/" + str(max)
+	$GameNameGroup/BulletLabel.text = str(current) + "/" + str(max)
 
 func update_drugs(drugs):
-	$DrugsLabel.text = str(drugs)
+	$GameNameGroup/DrugsLabel.text = str(drugs)
 	
