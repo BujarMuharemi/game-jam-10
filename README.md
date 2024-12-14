@@ -25,9 +25,5 @@ Finite State Machine for the enmy AI ?
 
 
 ## MVP
-- collsion with tilemap
-- player movement
 - enemy movement
 - game manager ?
-
-
