@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtqs473g4ghc1"]
 
-[ext_resource type="Script" path="res://game_world/player/weapon.gd" id="1_ogbra"]
-[ext_resource type="Texture2D" uid="uid://fvd7x2i54hil" path="res://game_world/player/sniper.png" id="2_tuqkx"]
+[ext_resource type="Script" path="res://game_world/weapons/weapon.gd" id="1_ogbra"]
+[ext_resource type="Texture2D" uid="uid://fvd7x2i54hil" path="res://game_world/weapons/sniper.png" id="2_tuqkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm6lf"]
 size = Vector2(69, 33)

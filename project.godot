@@ -55,6 +55,10 @@ shoot={
 ]
 }
 
+[global_group]
+
+bullet=""
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
