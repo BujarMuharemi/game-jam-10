@@ -859,7 +859,7 @@ offset = Vector2(-3, 12)
 
 [node name="arm_right" type="Sprite2D" parent="body_container/body"]
 position = Vector2(1.99412, 22.9999)
-scale = Vector2(0.99981, 0.999806)
+scale = Vector2(0.99981, 0.999807)
 skew = 0.000217199
 texture = ExtResource("3_i88sb")
 offset = Vector2(17.9025, 3.78722)
@@ -873,19 +873,18 @@ texture = ExtResource("4_peelg")
 offset = Vector2(9, 1)
 
 [node name="wing_right" type="Sprite2D" parent="body_container/body"]
-position = Vector2(-10.0039, 18.1)
-rotation = 0.0551761
-scale = Vector2(0.999814, 0.999856)
-skew = 0.000388145
+position = Vector2(-10.0043, 19)
+scale = Vector2(0.999836, 0.999835)
+skew = 0.00039041
 texture = ExtResource("5_u1yoy")
 offset = Vector2(-17, 2)
 
 [node name="wing_left" type="Sprite2D" parent="body_container/body"]
 z_index = -1
 position = Vector2(-9.00233, 14)
-rotation = 0.176382
-scale = Vector2(0.999772, 0.999905)
-skew = 0.000366688
+rotation = 0.139633
+scale = Vector2(0.999785, 0.999892)
+skew = 0.000375509
 texture = ExtResource("6_f1dy7")
 offset = Vector2(-23, 10)
 
@@ -909,9 +908,8 @@ offset = Vector2(-3.37682, 11.6786)
 [node name="tail" type="Sprite2D" parent="body_container/body"]
 z_index = -2
 position = Vector2(-5.00625, 23.9999)
-rotation = 0.0287746
-scale = Vector2(0.999816, 0.999837)
-skew = 0.000389814
+scale = Vector2(0.999827, 0.999826)
+skew = 0.00039041
 texture = ExtResource("9_e8tqi")
 offset = Vector2(-25, 8)
 
@@ -1035,7 +1033,7 @@ remote_path = NodePath("../../../../../../body/gun")
 [node name="arm_r" type="Bone2D" parent="body_container/bones/Skeleton2D/torso"]
 z_index = 3
 position = Vector2(7, 15)
-scale = Vector2(0.999813, 0.99981)
+scale = Vector2(0.999813, 0.999811)
 skew = -0.000173211
 rest = Transform2D(0.990168, 0.13883, -0.138666, 0.990192, 7, 15)
 auto_calculate_length_and_angle = false

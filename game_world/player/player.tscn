@@ -27,7 +27,10 @@ shape = SubResource("RectangleShape2D_2idj0")
 debug_color = Color(0.789998, 0.192179, 0.930673, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0.05, 0)
+position = Vector2(0, -2)
+limit_bottom = 120
+limit_smoothed = true
+position_smoothing_enabled = true
 script = ExtResource("3_ktpkl")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_pe6qi")]
