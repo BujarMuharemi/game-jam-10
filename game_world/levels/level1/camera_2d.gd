@@ -12,7 +12,7 @@ var offset_camera: Vector2 = Vector2(50, 0)
 
 # Smooth follow settings
 @export var smoothing_enabled: bool = true
-@export var smoothing_speed: float = 5.0
+@export var smoothing_speed: float = 10.0
 var smoothing = false
 
 @onready var player = get_parent()
