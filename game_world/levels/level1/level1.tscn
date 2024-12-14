@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cvhlhk6x6txg2" path="res://game_world/levels/sheet.png" id="1_7brkm"]
 [ext_resource type="PackedScene" uid="uid://drwvksi351kek" path="res://game_world/player/player.tscn" id="2_odisw"]
 [ext_resource type="PackedScene" uid="uid://b3wm5y3q8g771" path="res://game_world/enemy/enemy.tscn" id="3_d4khv"]
-[ext_resource type="PackedScene" uid="uid://dtqs473g4ghc1" path="res://game_world/player/weapon.tscn" id="4_dkvvh"]
+[ext_resource type="PackedScene" uid="uid://ck3w8d7yf1by5" path="res://game_world/bullet/bullet.tscn" id="5_3vn3h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbv88"]
 texture = ExtResource("1_7brkm")
@@ -83,5 +83,5 @@ position = Vector2(143, 7)
 [node name="Enemy" parent="." instance=ExtResource("3_d4khv")]
 position = Vector2(379, 11)
 
-[node name="Weapon" parent="." instance=ExtResource("4_dkvvh")]
-position = Vector2(533, -105)
+[node name="Bullet" parent="." instance=ExtResource("5_3vn3h")]
+position = Vector2(-121, 27)

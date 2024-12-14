@@ -4,6 +4,7 @@ extends Node
 var knockbage_damage :=100
 var stun_time := 1.5
 
+'''
 func on_hitbox_area_entered(area):
 	if area is HitBoxComponent:
 		var hitbox: HitBoxComponent = area
@@ -14,6 +15,7 @@ func on_hitbox_area_entered(area):
 		#attack.stun_time = stun_time
 		
 		hitbox.damage(attack)
+'''
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

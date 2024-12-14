@@ -29,3 +29,5 @@ health_component = NodePath("../HealthComponent")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
 position = Vector2(-4, 17)
 shape = SubResource("RectangleShape2D_hi2fg")
+
+[connection signal="area_entered" from="HitBoxComponent" to="HealthComponent" method="_on_hit_box_component_area_entered"]
