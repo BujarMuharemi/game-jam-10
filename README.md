@@ -5,17 +5,17 @@ Uni Ulm Jam 2
 
 ## godot featuers to use
 - tilemap
+  - can be used for animated tiles
+  - to pick up data and collison
 - Parallax2D
-- shader
+- shader's
 - AudioStreamPlaylist
 
 
-fdfdf
 
 gun shooting direction only in 2 axis ?? no mouse
 Finite State Machine for the enmy AI ?
 
-43478
 ## Components
 - movementComponent
 - HealthComponent
@@ -25,5 +25,9 @@ Finite State Machine for the enmy AI ?
 
 
 ## MVP
-- player movement, 
+- collsion with tilemap
+- player movement
+- enemy movement
+- game manager ?
+
 
