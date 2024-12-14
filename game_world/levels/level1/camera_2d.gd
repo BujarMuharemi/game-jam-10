@@ -1,7 +1,7 @@
 extends Camera2D
 
 # Define the camera boundaries (set to null for no boundaries)
-@export var use_boundaries: bool = true
+@export var use_boundaries: bool = false
 @export var boundary_top: float = -500.0
 @export var boundary_bottom: float = 500.0
 @export var boundary_left: float = -1000.0
