@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdkpxqmc304w5"]
+
+[ext_resource type="Script" path="res://UI/hud_scene/hud_scene.gd" id="1_byc0c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbtx1"]
+bg_color = Color(0.686275, 0.694118, 1, 0.52549)
+
+[node name="hud_scene" type="CanvasLayer"]
+script = ExtResource("1_byc0c")
+
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tbtx1")
+
+[node name="GameNameGroup" type="VFlowContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.502
+anchor_right = 0.502
+offset_left = -401.56
+offset_top = 20.0
+offset_right = 506.44
+offset_bottom = 318.0
+grow_horizontal = 2
+
+[node name="HealthLabel" type="Label" parent="GameNameGroup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Wie viel Leben habe ich?
+"
+
+[node name="BulletLabel" type="Label" parent="GameNameGroup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Wie viele Bullets habe ich?
+"
+
+[node name="DrugsLabel" type="Label" parent="GameNameGroup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Wie viel Leben habe ich?
+"

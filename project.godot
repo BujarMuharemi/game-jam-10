@@ -28,6 +28,10 @@ window/size/viewport_height=720
 
 enabled=PackedStringArray("res://addons/sound_manager/plugin.cfg")
 
+[global_group]
+
+drugs=""
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
