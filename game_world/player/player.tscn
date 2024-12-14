@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://drwvksi351kek"]
+[gd_scene load_steps=10 format=3 uid="uid://drwvksi351kek"]
 
 [ext_resource type="Script" path="res://game_world/player/player.gd" id="1_bbn6v"]
 [ext_resource type="Texture2D" uid="uid://dstqv0eylfvko" path="res://game_world/player/character_femaleAdventurer_cheer0.png" id="2_qt5ua"]
@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://lqx5g2ugqwck" path="res://game_world/player/health_component.tscn" id="4_pe6qi"]
 [ext_resource type="Script" path="res://game_world/enemy/hit_box_component.gd" id="5_716gs"]
 [ext_resource type="PackedScene" uid="uid://dtqs473g4ghc1" path="res://game_world/player/weapon.tscn" id="6_cqgbo"]
+[ext_resource type="PackedScene" uid="uid://d1qvkkvrifxkg" path="res://game_world/player_rig/player_rig.tscn" id="7_jodtl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2idj0"]
-size = Vector2(78, 100)
+size = Vector2(86, 69)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3r0ar"]
 size = Vector2(58, 25)
@@ -17,10 +18,11 @@ size = Vector2(58, 25)
 script = ExtResource("1_bbn6v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_qt5ua")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(-7, 24.5)
 shape = SubResource("RectangleShape2D_2idj0")
 debug_color = Color(0.789998, 0.192179, 0.930673, 0.42)
 
@@ -35,8 +37,12 @@ script = ExtResource("5_716gs")
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
-position = Vector2(-18, 51.5)
+position = Vector2(-21, 47)
 shape = SubResource("RectangleShape2D_3r0ar")
 
 [node name="Weapon" parent="." instance=ExtResource("6_cqgbo")]
+visible = false
 position = Vector2(53, 5)
+
+[node name="player_rig" parent="." instance=ExtResource("7_jodtl")]
+position = Vector2(1, 0)
