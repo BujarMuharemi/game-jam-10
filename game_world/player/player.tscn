@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dstqv0eylfvko" path="res://game_world/player/character_femaleAdventurer_cheer0.png" id="2_qt5ua"]
 [ext_resource type="Script" path="res://game_world/levels/level1/camera_2d.gd" id="3_ktpkl"]
 [ext_resource type="PackedScene" uid="uid://lqx5g2ugqwck" path="res://game_world/components/health/health_component.tscn" id="4_pe6qi"]
-[ext_resource type="Script" path="res://game_world/enemy/hit_box_component.gd" id="5_716gs"]
+[ext_resource type="Script" path="res://game_world/components/hit_box/hit_box_component.gd" id="5_716gs"]
 [ext_resource type="PackedScene" uid="uid://dtqs473g4ghc1" path="res://game_world/weapons/weapon.tscn" id="6_cqgbo"]
 [ext_resource type="PackedScene" uid="uid://d1qvkkvrifxkg" path="res://game_world/player_rig/player_rig.tscn" id="7_jodtl"]
 
@@ -38,10 +38,8 @@ script = ExtResource("3_ktpkl")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_pe6qi")]
 
-
 [node name="HitBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
 script = ExtResource("5_716gs")
-
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
