@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://uu1iw3kfppov"]
+[gd_scene load_steps=7 format=4 uid="uid://uu1iw3kfppov"]
 
 [ext_resource type="Texture2D" uid="uid://cvhlhk6x6txg2" path="res://game_world/levels/sheet.png" id="1_7brkm"]
 [ext_resource type="PackedScene" uid="uid://drwvksi351kek" path="res://game_world/player/player.tscn" id="2_odisw"]
 [ext_resource type="PackedScene" uid="uid://b3wm5y3q8g771" path="res://game_world/enemy/enemy.tscn" id="3_d4khv"]
+[ext_resource type="PackedScene" uid="uid://bcpcm54xduqp0" path="res://game_world/player/pickups/drugs/drug.tscn" id="4_wcamv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbv88"]
 texture = ExtResource("1_7brkm")
@@ -87,3 +88,6 @@ position = Vector2(286, -316)
 
 [node name="Enemy3" parent="." instance=ExtResource("3_d4khv")]
 position = Vector2(595, -316)
+
+[node name="Drug" parent="." instance=ExtResource("4_wcamv")]
+position = Vector2(272, 26)

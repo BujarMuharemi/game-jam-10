@@ -85,7 +85,9 @@ func consume_pickup(pickup: PickUp):
 	pickup.apply_effect(self)
 
 func _on_area_entered(area: Area2D) -> void:
+	print("HALLO?")
 	if area.is_in_group("pickup"):
+		print("FOOOO")
 		consume_pickup(area.get_parent())
 
 func _process(delta: float) -> void:

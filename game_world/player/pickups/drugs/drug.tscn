@@ -1,15 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcpcm54xduqp0"]
+[gd_scene load_steps=4 format=3 uid="uid://bcpcm54xduqp0"]
 
 [ext_resource type="Script" path="res://game_world/player/pickups/drugs/drug.gd" id="1_8k4sx"]
+[ext_resource type="Texture2D" uid="uid://da1ou2724ih8l" path="res://icon.svg" id="2_8scu6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbjct"]
 
-[node name="Drug" type="Node2D"]
+[node name="Drug" type="Node2D" groups=["drugs", "pickup"]]
 script = ExtResource("1_8k4sx")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_8scu6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_cbjct")
