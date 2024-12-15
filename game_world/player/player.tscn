@@ -23,6 +23,7 @@ debug_color = Color(0.789998, 0.192179, 0.930673, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -2)
+zoom = Vector2(1.2, 1.2)
 limit_bottom = 120
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -43,3 +44,4 @@ position = Vector2(1, 0)
 
 [node name="Weapon" parent="player_rig" instance=ExtResource("6_cqgbo")]
 position = Vector2(52, 5)
+gunCoolDownTime = 0.05

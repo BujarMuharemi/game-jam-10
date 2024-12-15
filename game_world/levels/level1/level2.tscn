@@ -92,11 +92,13 @@ tile_set = SubResource("TileSet_np6er")
 position = Vector2(0, -346)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(2.5, 2.5)
+transform = Transform2D(2.5, 0, 0, 2.5, 0, 0)
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_repeat = 2
-position = Vector2(-1223, 250)
+position = Vector2(-1223, 100)
 motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(1280, 0)
 
