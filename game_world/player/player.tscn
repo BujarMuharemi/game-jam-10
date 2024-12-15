@@ -4,43 +4,53 @@
 [ext_resource type="Texture2D" uid="uid://dstqv0eylfvko" path="res://game_world/player/character_femaleAdventurer_cheer0.png" id="2_qt5ua"]
 [ext_resource type="Script" path="res://game_world/levels/level1/camera_2d.gd" id="3_ktpkl"]
 [ext_resource type="PackedScene" uid="uid://lqx5g2ugqwck" path="res://game_world/components/health/health_component.tscn" id="4_pe6qi"]
+[ext_resource type="Script" path="res://game_world/enemy/hit_box_component.gd" id="5_716gs"]
 [ext_resource type="PackedScene" uid="uid://dtqs473g4ghc1" path="res://game_world/weapons/weapon.tscn" id="6_cqgbo"]
-[ext_resource type="PackedScene" uid="uid://cru7qk0dvs187" path="res://game_world/components/hit_box/hit_box_component.tscn" id="6_qxh24"]
-[ext_resource type="Script" path="res://game_world/components/movement/movement_component.gd" id="7_p0h3f"]
+[ext_resource type="PackedScene" uid="uid://d1qvkkvrifxkg" path="res://game_world/player_rig/player_rig.tscn" id="7_jodtl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2idj0"]
-size = Vector2(78, 100)
+size = Vector2(86, 69)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_llipd"]
-size = Vector2(50, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r0ar"]
+size = Vector2(58, 25)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_bbn6v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_qt5ua")
 
 [node name="Weapon" parent="Sprite2D" instance=ExtResource("6_cqgbo")]
 position = Vector2(57, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(-7, 24.5)
 shape = SubResource("RectangleShape2D_2idj0")
 debug_color = Color(0.789998, 0.192179, 0.930673, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0.05, 0)
+position = Vector2(0, -2)
+limit_bottom = 120
+limit_smoothed = true
+position_smoothing_enabled = true
 script = ExtResource("3_ktpkl")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_pe6qi")]
 
-[node name="HitBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("6_qxh24")]
+
+[node name="HitBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
+script = ExtResource("5_716gs")
+
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
-position = Vector2(-6, 22)
-scale = Vector2(1, 3.78994)
-shape = SubResource("RectangleShape2D_llipd")
+position = Vector2(-21, 47)
+shape = SubResource("RectangleShape2D_3r0ar")
 
-[node name="MovementComponent" type="Node" parent="."]
-script = ExtResource("7_p0h3f")
+[node name="Weapon" parent="." instance=ExtResource("6_cqgbo")]
+visible = false
+position = Vector2(53, 5)
+
+[node name="player_rig" parent="." instance=ExtResource("7_jodtl")]
+position = Vector2(1, 0)
