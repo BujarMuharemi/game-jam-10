@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://drwvksi351kek"]
+[gd_scene load_steps=9 format=3 uid="uid://drwvksi351kek"]
 
 [ext_resource type="Script" path="res://game_world/player/player.gd" id="1_bbn6v"]
-[ext_resource type="Texture2D" uid="uid://dstqv0eylfvko" path="res://game_world/player/character_femaleAdventurer_cheer0.png" id="2_qt5ua"]
 [ext_resource type="Script" path="res://game_world/levels/level1/camera_2d.gd" id="3_ktpkl"]
 [ext_resource type="PackedScene" uid="uid://lqx5g2ugqwck" path="res://game_world/components/health/health_component.tscn" id="4_pe6qi"]
-[ext_resource type="Script" path="res://game_world/enemy/hit_box_component.gd" id="5_716gs"]
+[ext_resource type="Script" path="res://game_world/components/hit_box/hit_box_component.gd" id="5_716gs"]
 [ext_resource type="PackedScene" uid="uid://dtqs473g4ghc1" path="res://game_world/weapons/weapon.tscn" id="6_cqgbo"]
 [ext_resource type="PackedScene" uid="uid://d1qvkkvrifxkg" path="res://game_world/player_rig/player_rig.tscn" id="7_jodtl"]
 
@@ -16,13 +15,6 @@ size = Vector2(58, 25)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_bbn6v")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("2_qt5ua")
-
-[node name="Weapon" parent="Sprite2D" instance=ExtResource("6_cqgbo")]
-position = Vector2(57, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7, 24.5)
@@ -38,19 +30,16 @@ script = ExtResource("3_ktpkl")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_pe6qi")]
 
-
 [node name="HitBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
 script = ExtResource("5_716gs")
-
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
 position = Vector2(-21, 47)
 shape = SubResource("RectangleShape2D_3r0ar")
 
-[node name="Weapon" parent="." instance=ExtResource("6_cqgbo")]
-visible = false
-position = Vector2(53, 5)
-
 [node name="player_rig" parent="." instance=ExtResource("7_jodtl")]
 position = Vector2(1, 0)
+
+[node name="Weapon" parent="player_rig" instance=ExtResource("6_cqgbo")]
+position = Vector2(52, 5)

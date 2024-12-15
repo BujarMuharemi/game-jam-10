@@ -25,7 +25,9 @@ func _physics_process(delta: float) -> void:
 	# Toggle movement direction animation
 	if direction > 0:
 		player_rig.scale.x = 1  # Rechts
+		$player_rig/Weapon.set_dir(Vector2.RIGHT)
 	elif direction < 0:
+		$player_rig/Weapon.set_dir(Vector2.LEFT)
 		player_rig.scale.x = -1  # Links
 
 	# play animations

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://bhmr0xc0t5d4b"]
+[gd_scene load_steps=6 format=4 uid="uid://bnlx1jl33ugyo"]
 
 [ext_resource type="Texture2D" uid="uid://6cv8olre7por" path="res://game_world/levels/town_tiles.png" id="1_s71hh"]
 [ext_resource type="PackedScene" uid="uid://drwvksi351kek" path="res://game_world/player/player.tscn" id="2_nvf4o"]
