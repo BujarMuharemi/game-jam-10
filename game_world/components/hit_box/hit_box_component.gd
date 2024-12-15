@@ -19,7 +19,7 @@ func _on_area_entered(area: Area2D) -> void:
 		health_component.damage(attack)
 		#area.get_parent().queue_free()
 		
-	if(area.is_in_group("drugs") ):
+	if(area.get_parent().is_in_group("drugs") ):
 		print('drogen nehmen pls')
 		var drug_type = area.name  # Name der Droge wird verwendet, z.B., "cocaine"
 		var drug_script = area.get_parent()
