@@ -21,6 +21,9 @@ script = ExtResource("1_bbn6v")
 visible = false
 texture = ExtResource("2_qt5ua")
 
+[node name="Weapon" parent="Sprite2D" instance=ExtResource("6_cqgbo")]
+position = Vector2(57, 2)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7, 24.5)
 shape = SubResource("RectangleShape2D_2idj0")
@@ -35,8 +38,10 @@ script = ExtResource("3_ktpkl")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_pe6qi")]
 
+
 [node name="HitBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
 script = ExtResource("5_716gs")
+
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
