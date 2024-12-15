@@ -14,13 +14,15 @@ var canShootFlag = true
 #var knockbage_damage :=100
 #var stun_time := 1.5
 var muzzle:Node2D
+var bullet_dir:Vector2
 
 func _ready() -> void:
+	bullet_dir = Vector2.RIGHT
 	muzzle = $Muzzle
 	$GunCoolDown.wait_time = gunCoolDownTime
 
-func _shoot():
-	pass
+func set_dir(dir:Vector2):
+	bullet_dir=dir
 	
 
 func _process(delta):
@@ -33,8 +35,8 @@ func _process(delta):
 		bullet.global_position = muzzle.global_position
 		
 		#TODO rotate bullet etc
-		bullet.rotation_degrees = 90.0
-		bullet.set_direction(Vector2.RIGHT)
+		bullet.rotation_degrees = 90.0 * bullet_dir.x
+		bullet.set_direction(bullet_dir)
 		
 		get_tree().root.get_child(0).add_child(bullet)
 		#bullet.position = position + diff*gunDistance
