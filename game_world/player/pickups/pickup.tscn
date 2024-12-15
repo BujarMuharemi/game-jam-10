@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg62b3fay2tkm"]
+
+[ext_resource type="Script" path="res://game_world/player/pickups/pickup.gd" id="1_iwd38"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gcvg"]
+
+[node name="Pickup" type="Node2D"]
+script = ExtResource("1_iwd38")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_4gcvg")

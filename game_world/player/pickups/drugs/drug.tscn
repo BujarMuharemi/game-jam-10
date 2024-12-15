@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcpcm54xduqp0"]
+
+[ext_resource type="Script" path="res://game_world/player/pickups/drugs/drug.gd" id="1_8k4sx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbjct"]
+
+[node name="Drug" type="Node2D"]
+script = ExtResource("1_8k4sx")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_cbjct")
